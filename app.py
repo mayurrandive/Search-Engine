@@ -44,13 +44,13 @@ def load_inverted_index():
 
 
 def load_link_of_qs():
-    with open("Leetcode-Scraping/Questions_data/Que_index.txt", "r") as f:
+    with open("Leetcode-Scraping/Questions_data/Que_index.txt", "r", encoding='utf-8') as f:
         links = f.readlines()
 
     return links
 
 def load_title_of_qs():
-    with open("Leetcode-Scraping/Questions_data/index.txt", "r") as f:
+    with open("Leetcode-Scraping/Questions_data/index.txt", "r", encoding='utf-8') as f:
         title = f.readlines()
 
     return title
