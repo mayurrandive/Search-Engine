@@ -122,14 +122,10 @@
       {% for result in results %}
       <div class="result">
         <p>
-          Question Title:
-          <span style="color: #ff6600">{{ result['Question Title'] }}</span>
-        </p>
-        <p>
           Question Link:
           <a href="{{ result['Question Link'] }}"
-            >{{ result['Question Link'] }}</a
-          >
+            >{{ result['Question Link'] }}
+          </a>
         </p>
       </div>
       {% endfor %} {% endif %}

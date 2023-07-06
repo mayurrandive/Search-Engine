@@ -49,29 +49,29 @@ def load_link_of_qs():
 
     return links
 
-def load_title_of_qs():
-    with open("Leetcode-Scraping/Questions_data/index.txt", "r", encoding='utf-8') as f:
-        title = f.readlines()
+# def load_title_of_qs():
+#     with open("Leetcode-Scraping/Questions_data/index.txt", "r", encoding='utf-8') as f:
+#         title = f.readlines()
 
-    return title
+#     return title
 
 
 vocab = load_vocab()            # vocab : idf_values
 document = load_document()
 inverted_index = load_inverted_index()
 Qlink = load_link_of_qs()
-Qtitle = load_title_of_qs()
+# Qtitle = load_title_of_qs()
 
 
-def trim_numeric_values(strings):
-    trimmed_strings = []
-    for string in strings:
-        # Use regular expression to match and remove the initial numeric values
-        trimmed_string = re.sub(r'^\d+\.\s*', '', string)
-        trimmed_strings.append(trimmed_string)
-    return trimmed_strings
+# def trim_numeric_values(strings):
+#     trimmed_strings = []
+#     for string in strings:
+#         # Use regular expression to match and remove the initial numeric values
+#         trimmed_string = re.sub(r'^\d+\.\s*', '', string)
+#         trimmed_strings.append(trimmed_string)
+#     return trimmed_strings
 
-Qtitle = trim_numeric_values(Qtitle)
+# Qtitle = trim_numeric_values(Qtitle)
 
 
 
@@ -137,7 +137,7 @@ def calc_docs_sorted_order(q_terms):
             # print("Question Link:", Qlink[int(
             #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
             ans.append({"Question Link": Qlink[int(
-                doc_index) - 1][:-2], "Question Title": Qtitle[int(doc_index) - 1]})
+                doc_index) - 1][:-2]})
     return ans
 
 
