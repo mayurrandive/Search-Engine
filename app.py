@@ -11,7 +11,7 @@ def load_vocab():
     vocab = {}
     with open("vocab.txt", "r", encoding='utf-8') as f:
         vocab_terms = f.readlines()
-    with open("idf-values.txt", "r") as f:
+    with open("idf-values.txt", "r", encoding='utf-8') as f:
         idf_values = f.readlines()
 
     for (term, idf_value) in zip(vocab_terms, idf_values):
