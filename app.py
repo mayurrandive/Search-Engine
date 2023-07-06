@@ -9,7 +9,7 @@ from wtforms import StringField, SubmitField
 
 def load_vocab():
     vocab = {}
-    with open("vocab.txt", "r") as f:
+    with open("vocab.txt", "r", encoding='utf-8') as f:
         vocab_terms = f.readlines()
     with open("idf-values.txt", "r") as f:
         idf_values = f.readlines()
@@ -21,7 +21,7 @@ def load_vocab():
 
 
 def load_document():
-    with open("document.txt", "r") as f:
+    with open("document.txt", "r", encoding='utf-8') as f:
         documents = f.readlines()
 
     # print('Number of documents: ', len(documents))
@@ -31,7 +31,7 @@ def load_document():
 
 def load_inverted_index():
     inverted_index = {}
-    with open('inverted_index.txt', 'r') as f:
+    with open('inverted_index.txt', 'r', encoding='utf-8') as f:
         inverted_index_terms = f.readlines()
 
     for row_num in range(0, len(inverted_index_terms), 2):
